@@ -143,12 +143,6 @@ function drop1()
   con = null; 
 }
 
-function remove_rope()
-{
-  rope.break();
-  con.detach();
-  con = null; 
-}
 
 function collide(body,sprite,x)
 {
