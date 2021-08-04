@@ -109,10 +109,14 @@ function draw()
   if(collide(fruit,bunny,80)==true)
   {
    
+   removeRope();
    bubble.visible = false;
    World.remove(engine.world,fruit);
    fruit = null;
    bunny.changeAnimation('eating');
+    
+    
+    
   }
   
   if(collide(fruit,bubble,40) == true)
@@ -161,3 +165,10 @@ function collide(body,sprite,x)
     }
   }
 }
+
+function removeRope(){
+  rope.break();
+  con.detach();
+  con = null;
+}
+  
